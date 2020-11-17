@@ -73,7 +73,7 @@
           <div class="col d-flex align-items-center justify-content-center">
             <ul class= "dots">
 
-              <li class = "dot"  v-for="n in images.length"> <a @click="counter= n - 1"  href="#"><i class="fas fa-circle"></i></a> </li>
+              <li class = "dot"  v-for="n in images.length"> <a @click="counter= n - 1"  href="#"><i class="fas fa-circle" :class= "{active:counter == n-1}"></i></a> </li>
             </ul>
           </div>
         </div>

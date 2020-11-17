@@ -12,22 +12,19 @@ const app = new Vue({
     images,
   },
   methods: {
-    forward() {
+    forward(e) {
       if (this.counter == this.images.length - 1) {
         this.counter = 0;
       } else {
         this.counter++;
       }
     },
-    backward() {
-       if (this.counter == 0) {
-         this.counter = this.images.length - 1;
-       } else {
-         this.counter--;
-       }
-    }
-
-    
-
-  }
+    backward(e) {
+      if (this.counter == 0) {
+        this.counter = this.images.length - 1;
+      } else {
+        this.counter--;
+      }
+    },
+  },
 });
