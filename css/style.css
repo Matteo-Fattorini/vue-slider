@@ -9,7 +9,9 @@
 img {
     width: 100%;
     max-height: 500px;
+   
 }
+
 
 
 .padded {
@@ -18,4 +20,13 @@ img {
 
 #select {
     margin-bottom: 50px;
+}
+
+
+
+.dots {
+    margin-top: 10px;
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
 }

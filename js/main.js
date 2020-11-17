@@ -13,10 +13,21 @@ const app = new Vue({
   },
   methods: {
     forward() {
-      this.counter == this.images.length - 1 ? (this.counter = 0): this.counter++;
+      if (this.counter == this.images.length - 1) {
+        this.counter = 0;
+      } else {
+        this.counter++;
+      }
     },
     backward() {
-      this.counter == 0 ? (this.counter = this.images.length - 1): this.counter--;
-    },
-  },
+       if (this.counter == 0) {
+         this.counter = this.images.length - 1;
+       } else {
+         this.counter--;
+       }
+    }
+
+    
+
+  }
 });

@@ -41,6 +41,7 @@
 
     <script defer src="js/main.js" charset="utf-8"></script>
   </head>
+
   <body>
     <div id="main">
       <div class="container padded">
@@ -51,9 +52,10 @@
             </select>
           </div>
         </div>
+
         <div class="row">
           <div class="col-1 d-flex align-items-center justify-content-center">
-            <a @click="backward" href="#"
+            <a @click="backward()" href="#"
               ><i class="fas fa-arrow-left fa-2x"></i
             ></a>
           </div>
@@ -61,11 +63,21 @@
             <img :src="images[counter]" alt="" />
           </div>
           <div class="col-1 d-flex align-items-center justify-content-center">
-            <a @click="forward" href="#"
+            <a @click="forward()" href="#"
               ><i class="fas fa-arrow-right fa-2x"></i
             ></a>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col d-flex align-items-center justify-content-center">
+            <ul class= "dots">
+
+              <li class = "dot"  v-for="n in images.length"> <a @click="counter= n - 1"  href="#"><i class="fas fa-circle"></i></a> </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </body>
